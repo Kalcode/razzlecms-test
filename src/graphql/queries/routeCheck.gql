@@ -1,0 +1,11 @@
+query PageCheck($uid: String!) {
+  route(path: $uid) {
+    routed
+    path
+    ... on EntityCanonicalUrl {
+      nodeContext {
+        entityBundle
+      }
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "graphql_api": "https://dev-drupal-next-boilerplate.pantheonsite.io/graphql",
+  "site_name": "My Razzle Project",
+  "site_description": "A boilerplate Razzle Server connected to a Drupal Headless backend",
+  "site_url": "http://localhost:3000",
+  "query_page_key": "route.nodeContext"
+}

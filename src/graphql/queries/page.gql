@@ -1,0 +1,19 @@
+query PageQuery($uid: String!) {
+  route(path: $uid) {
+    ... on EntityCanonicalUrl {
+      nodeContext {
+        ...Page
+      }
+    }
+  }
+}
+
+fragment Page on NodePage {
+  title
+  body {
+    value
+  }
+  fieldTextBanner {
+    value
+  }
+}

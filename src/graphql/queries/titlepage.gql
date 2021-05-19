@@ -1,0 +1,20 @@
+query TitlePageQuery($uid: String!) {
+  route(path: $uid) {
+    ... on EntityCanonicalUrl {
+      nodeContext {
+        ... on NodeTitleLayout {
+          title
+          body {
+            value
+          }
+          fieldImage {
+            height
+            url
+            width
+            alt
+          }
+        }
+      }
+    }
+  }
+}

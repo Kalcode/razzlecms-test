@@ -1,0 +1,67 @@
+query homePageQuery {
+  servicesMenu: menuByName(name: "services-menu") {
+    links {
+      label
+      url {
+        path
+      }
+    }
+  }
+
+  route(path: "/") {
+    ... on EntityCanonicalUrl {
+      nodeContext {
+        ... on NodeHomePage {
+          title
+
+          body {
+            value
+          }
+
+          fieldTextBanner {
+            value
+          }
+
+          fieldImageBanner {
+            url
+            height
+            width
+            alt
+          }
+
+          fieldMiddleCta {
+            entity {
+              ... on NodeLinksBanner {
+                title
+
+                fieldDescription
+
+                fieldImage {
+                  url
+                  height
+                  width
+                  alt
+                }
+
+                fieldLink {
+                  uri
+                  title
+                }
+              }
+            }
+          }
+
+          fieldStats {
+            entity {
+              ... on NodeStat {
+                title
+
+                fieldDescription
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

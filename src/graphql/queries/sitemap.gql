@@ -1,0 +1,15 @@
+query SiteMapQuery {
+  nodeQuery(
+    limit: 1000
+    offset: 0
+    filter: {
+      conditions: [{ operator: NOT_EQUAL, field: "type", value: ["webform"] }]
+    }
+  ) {
+    entities {
+      entityUrl {
+        path
+      }
+    }
+  }
+}

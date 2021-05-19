@@ -1,0 +1,16 @@
+query InsurancePageQuery($uid: String!) {
+  route(path: $uid) {
+    ... on EntityCanonicalUrl {
+      nodeContext {
+        ... on NodeInsuranceLayout {
+          title
+          body {
+            value
+          }
+
+          fieldInsuranceText
+        }
+      }
+    }
+  }
+}
